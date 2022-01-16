@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="您的BMI, BMI < 18.5體重過輕，需要多運動，均衡飲食，以增加體能，維持健康！, ​​&nbsp; &nbsp;Height, ​
+	
+		
+			
+			
+		
+	
+​&nbsp; &nbsp;Weight">
+  <meta name="description" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <title>Question two</title>
+  <link rel="stylesheet" href="nicepage.css" media="screen">
+  <link rel="stylesheet" href="Question--two.css" media="screen">
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Lobster:400">
+
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+  <style>
+    input[type=number] {
+      width: 150px;
+      height: 30px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: #93e4d2;
+      color: rgb(0, 0, 0);
+    }
+  </style>
+
+  <script>
+    function BMI() {
+      var flag = true;
+      var H = document.getElementById("Submit_Height").value;
+      var W = document.getElementById("Submit_Weight").value;
+      document.getElementById("light").style.backgroundColor = "";
+      document.getElementById("light2").style.backgroundColor = "";
+      document.getElementById("normal").style.backgroundColor = "";
+      document.getElementById("normal2").style.backgroundColor = "";
+      document.getElementById("heavy").style.backgroundColor = "";
+      document.getElementById("heavy2").style.backgroundColor = "";
+      document.getElementById("veryheavy").style.backgroundColor = "";
+      document.getElementById("veryheavy2").style.backgroundColor = "";
+      var height = parseInt(H) / 100;
+      var weight = parseInt(W);
+      if ((H == null || H == "") && (W == null || W == "")) {
+        alert("請輸入您的身高和體重");
+        flag = false;
+        return;
+      }
+      if (H == null || H == "") {
+        alert("請輸入您的身高");
+        flag = false;
+        return;
+      }
+      if (W == null || W == "") {
+        alert("請輸入您的體重");
+        flag = false;
+      }
+      if (flag) {
+        var bmi = weight / (height * height);
+        var BMI = bmi.toString().substr(0, 5)
+        document.getElementById('displayBMI').innerHTML = BMI;
+        if (BMI < 18.5) {
+          document.getElementById('displayBMItext').innerHTML = "BMI&nbsp;&lt;&nbsp;18.5<br>「體重過輕」，需要多運動，均衡飲食，以增加體能，維持健康！";
+          document.getElementById("light").style.backgroundColor = "#dae7a9";
+          document.getElementById("light2").style.backgroundColor = "#dae7a9";
+          document.getElementById("Save").style.display = "";
+        } else if (BMI >= 18.5 && BMI < 24) {
+          document.getElementById('displayBMItext').innerHTML = "18.5&nbsp;&le;&nbsp;BMI&nbsp;&lt;&nbsp;24<br>恭喜！「健康體重」，要繼續保持！";
+          document.getElementById("normal").style.backgroundColor = "#96e671";
+          document.getElementById("normal2").style.backgroundColor = "#96e671";
+          document.getElementById("Save").style.display = "";
+        } else if (BMI >= 24 && BMI < 27) {
+          document.getElementById('displayBMItext').innerHTML = "24&nbsp;&le;&nbsp;BMI&nbsp;&lt;&nbsp;27<br>「體重過重」了，要小心囉，趕快力行「健康體重管理」！";
+          document.getElementById("heavy").style.backgroundColor = "#e4b46c";
+          document.getElementById("heavy2").style.backgroundColor = "#e4b46c";
+          document.getElementById("Save").style.display = "";
+        } else if (BMI >= 27) {
+          document.getElementById('displayBMItext').innerHTML = "BMI &nbsp;&ge;&nbsp;27<br>啊～「肥胖」，需要立刻力行「健康體重管理」囉！";
+          document.getElementById("veryheavy").style.backgroundColor = "#f06d5c";
+          document.getElementById("veryheavy2").style.backgroundColor = "#f06d5c";
+          document.getElementById("Save").style.display = "";
+        }
+      }
+    }
+
+    function download(content, fileName, contentType) {
+      const a = document.createElement("a");
+      const file = new Blob([content], { type: contentType });
+      a.href = URL.createObjectURL(file);
+      a.download = fileName;
+      a.click();
+    }
+
+    function save() {
+      const jsonData = {
+        Height: document.getElementById("Submit_Height").value,
+        Weight: document.getElementById("Submit_Weight").value,
+        BMI: document.getElementById("displayBMI").innerHTML,
+        Comments: document.getElementById("displayBMItext").innerHTML,
+      };
+      download(JSON.stringify(jsonData), "BMI_result.json", "text/plain");
+    }
+  </script>
+
+
+
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="Question  two">
+  <meta property="og:type" content="website">
+</head>
+
+<body class="u-body">
+  <header class="u-clearfix u-header u-header" id="sec-5c27">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+        <div class="menu-collapse"
+          style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+          <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                  <rect y="1" width="16" height="2"></rect>
+                  <rect y="7" width="16" height="2"></rect>
+                  <rect y="13" width="16" height="2"></rect>
+                </symbol>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="u-custom-menu u-nav-container">
+          <ul class="u-nav u-spacing-30 u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-palette-3-base u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-black u-nav-link u-text-active-palette-3-base u-text-grey-90 u-text-hover-white"
+                href="Question-one.html" style="padding: 10px 0px;">Question one</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-palette-3-base u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-black u-nav-link u-text-active-palette-3-base u-text-grey-90 u-text-hover-white"
+                href="Question--two.html" style="padding: 10px 0px;">Question two</a>
+            </li>
+          </ul>
+        </div>
+        <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-inner-container-layout u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Question-one.html"
+                    style="padding: 10px 0px;">Question one</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Question--two.html"
+                    style="padding: 10px 0px;">Question two</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+      <h3 class="u-align-left u-custom-font u-font-merriweather u-text u-text-palette-1-base u-text-1">
+        <span class="u-text-palette-2-base">R10228025&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          &nbsp;</span>
+      </h3>
+      <h3 class="u-align-center u-custom-font u-font-lobster u-text u-text-default u-text-2">Assignment 2</h3>
+    </div>
+  </header>
+  <section class="u-clearfix u-image u-image-tiles u-section-1" id="carousel_e819" data-image-width="1280"
+    data-image-height="720">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div
+        class="u-border-2 u-border-black u-container-style u-group u-opacity u-opacity-55 u-radius-30 u-shape-round u-white u-group-1">
+        <div class="u-container-layout u-valign-top u-container-layout-1">
+          <h1 class="u-align-center u-custom-font u-font-merriweather u-text u-text-1">
+            <span style="font-size: 3rem;" class="u-text-palette-2-base">您的BMI</span>
+            <span id="displayBMI" style="font-size: 3rem;" class="u-text-palette-2-base">測量記錄</span>
+            <br>
+          </h1>
+          <h1 id="displayBMItext" class="u-custom-font u-font-merriweather u-text u-text-2">若我是18歲 (含)
+            以上的成人，要如何判斷體重是否正常？
+          </h1>
+          <input id="Save" type="submit" value="Save Json" style="display:none ;" onclick="save()"
+            class="u-btn u-btn-round u-button-style u-palette-4-base u-radius-15 " data-animation-name="jackInTheBox"
+            data-animation-duration="1750" data-animation-delay="0" data-animation-direction="">
+        </div>
+      </div>
+      <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-left u-black u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h3 class="u-text u-text-body-alt-color u-text-default u-text-3"> 身體質量指數 (BMI) 計算器</h3>
+                <h1 class="u-text u-text-4"><span class="u-icon u-icon-1"><svg class="u-svg-content"
+                      viewBox="-34 0 512 512.00346" style="width: 1em; height: 1em;">
+                      <path
+                        d="m221.867188 494.933594v-477.867188c-.007813-9.421875-7.644532-17.0546872-17.066407-17.066406h-187.730469c-9.421874.0117188-17.0585932 7.644531-17.070312 17.066406v477.867188c.0117188 9.421875 7.648438 17.054687 17.070312 17.066406h187.730469c9.421875-.011719 17.058594-7.644531 17.066407-17.066406zm-204.796876-477.867188h187.730469v25.601563h-119.464843c-4.714844 0-8.535157 3.820312-8.535157 8.53125 0 4.714843 3.820313 8.535156 8.535157 8.535156h119.464843v17.066406h-59.730469c-4.714843 0-8.535156 3.820313-8.535156 8.53125 0 4.714844 3.820313 8.535157 8.535156 8.535157h59.730469v17.066406h-119.464843c-4.714844 0-8.535157 3.820312-8.535157 8.53125 0 4.714844 3.820313 8.535156 8.535157 8.535156h119.464843v17.066406h-59.730469c-4.714843 0-8.535156 3.820313-8.535156 8.535156 0 4.710938 3.820313 8.53125 8.535156 8.53125h59.730469v17.066407h-119.464843c-4.714844 0-8.535157 3.820312-8.535157 8.535156 0 4.710937 3.820313 8.53125 8.535157 8.53125h119.464843v17.066406h-59.730469c-4.714843 0-8.535156 3.820313-8.535156 8.535157 0 4.710937 3.820313 8.53125 8.535156 8.53125h59.730469v17.066406h-119.464843c-4.714844 0-8.535157 3.824218-8.535157 8.535156s3.820313 8.535156 8.535157 8.535156h119.464843v17.066406h-59.730469c-4.714843 0-8.535156 3.820313-8.535156 8.53125 0 4.714844 3.820313 8.535157 8.535156 8.535157h59.730469v17.066406h-119.464843c-4.714844 0-8.535157 3.820313-8.535157 8.53125 0 4.714844 3.820313 8.535156 8.535157 8.535156h119.472656v17.066407h-59.738282c-4.714843 0-8.535156 3.820312-8.535156 8.53125 0 4.714843 3.820313 8.535156 8.535156 8.535156h59.738282v17.066406h-119.472656c-4.714844 0-8.535157 3.820312-8.535157 8.535156 0 4.710938 3.820313 8.53125 8.535157 8.53125h119.472656v17.066406h-59.738282c-4.714843 0-8.535156 3.820313-8.535156 8.535157 0 4.710937 3.820313 8.53125 8.535156 8.53125h59.738282v17.066406h-119.472656c-4.714844 0-8.535157 3.820313-8.535157 8.535156 0 4.710938 3.820313 8.53125 8.535157 8.53125h119.472656v25.601563h-187.738282zm0 0">
+                      </path>
+                      <path
+                        d="m409.601562 486.398438v-121.039063c2.734376 1.011719 5.621094 1.542969 8.535157 1.574219 14.128906-.015625 25.582031-11.46875 25.597656-25.601563v-59.730469c-.027344-23.554687-19.113281-42.640624-42.664063-42.667968h-68.269531c-23.550781.027344-42.636719 19.113281-42.664062 42.667968v59.730469c.015625 14.132813 11.464843 25.585938 25.597656 25.601563 2.914063-.027344 5.800781-.5625 8.535156-1.574219v121.039063c-.046875 10.121093 5.898438 19.304687 15.144531 23.410156 9.246094 4.105468 20.046876 2.355468 27.519532-4.464844 7.476562 6.820312 18.277344 8.570312 27.523437 4.464844 9.246094-4.105469 15.191407-13.289063 15.144531-23.410156zm-93.867187-136.53125c-4.710937-.003907-8.527344-3.824219-8.53125-8.535157v-59.730469c.015625-14.132812 11.464844-25.585937 25.597656-25.601562h68.269531c14.128907.015625 25.582032 11.46875 25.597657 25.601562v59.730469c0 4.714844-3.820313 8.535157-8.53125 8.535157-4.714844 0-8.535157-3.820313-8.535157-8.535157v-42.664062c0-4.714844-3.820312-8.535157-8.53125-8.535157-4.714843 0-8.535156 3.820313-8.535156 8.535157v85.332031h-51.199218v-85.332031c0-4.714844-3.820313-8.535157-8.535157-8.535157-4.710937 0-8.53125 3.820313-8.53125 8.535157v42.664062c-.003906 4.710938-3.824219 8.53125-8.535156 8.535157zm34.132813 145.066406c-4.710938-.003906-8.527344-3.824219-8.53125-8.535156v-85.332032h17.066406v85.332032c-.003906 4.710937-3.824219 8.53125-8.535156 8.535156zm25.601562-8.535156v-85.332032h17.066406v85.332032c0 4.714843-3.820312 8.535156-8.535156 8.535156-4.710938 0-8.53125-3.820313-8.53125-8.535156zm0 0">
+                      </path>
+                      <path
+                        d="m366.933594 230.398438c23.566406 0 42.667968-19.101563 42.667968-42.664063 0-23.566406-19.101562-42.667969-42.667968-42.667969-23.5625 0-42.664063 19.101563-42.664063 42.667969.027344 23.550781 19.113281 42.636719 42.664063 42.664063zm0-68.265626c14.140625 0 25.601562 11.460938 25.601562 25.601563 0 14.136719-11.460937 25.597656-25.601562 25.597656-14.136719 0-25.597656-11.460937-25.597656-25.597656.015624-14.132813 11.46875-25.585937 25.597656-25.601563zm0 0">
+                      </path>
+                      <path
+                        d="m279.101562 121.96875c-1.601562-1.601562-3.769531-2.503906-6.03125-2.503906-2.265624 0-4.433593.902344-6.035156 2.503906l-25.59375 25.59375c-3.324218 3.339844-3.324218 8.734375 0 12.078125l25.59375 25.59375c3.347656 3.234375 8.671875 3.1875 11.960938-.105469 3.292968-3.292968 3.339844-8.613281.105468-11.960937l-11.03125-11.035157h47.664063c4.714844 0 8.535156-3.820312 8.535156-8.53125 0-4.714843-3.820312-8.535156-8.535156-8.535156h-47.664063l11.03125-11.035156c1.601563-1.597656 2.5-3.769531 2.5-6.03125s-.898437-4.433594-2.5-6.03125zm0 0">
+                      </path>
+                    </svg><img></span> &nbsp; &nbsp;Height
+                </h1>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                  type="number" min="0" id="Submit_Height" name="Submit_Height" />&nbsp;&nbsp;cm
+                <h1 class="u-text u-text-5"><span class="u-icon u-icon-2"><svg class="u-svg-content"
+                      viewBox="0 0 469.333 469.333" x="0px" y="0px" style="width: 1em; height: 1em;">
+                      <g>
+                        <g>
+                          <g>
+                            <path
+                              d="M426.667,0h-384C19.135,0,0,19.135,0,42.667v384c0,23.531,19.135,42.667,42.667,42.667h384     c23.531,0,42.667-19.135,42.667-42.667v-384C469.333,19.135,450.198,0,426.667,0z M448,426.667     c0,11.76-9.573,21.333-21.333,21.333h-384c-11.76,0-21.333-9.573-21.333-21.333v-384c0-11.76,9.573-21.333,21.333-21.333h384     c11.76,0,21.333,9.573,21.333,21.333V426.667z">
+                            </path>
+                            <path
+                              d="M234.667,64c-51.281,0-99.5,19.969-135.76,56.24c-4.167,4.167-4.167,10.917,0,15.083l60.333,60.333     c4.167,4.167,10.917,4.167,15.083,0c33.271-33.271,87.417-33.271,120.687,0c2.083,2.083,4.813,3.125,7.542,3.125     c2.729,0,5.458-1.042,7.542-3.125l60.333-60.333c4.167-4.167,4.167-10.917,0-15.083C334.167,83.969,285.948,64,234.667,64z      M302.177,173.406c-19.563-16.021-43.542-24.031-67.51-24.031c-10.073,0-20.078,1.741-29.826,4.57l-13.799-30.362     c-2.417-5.354-8.729-7.75-14.125-5.292c-5.365,2.438-7.729,8.76-5.292,14.125l13.361,29.395     c-6.214,3.271-12.236,7.013-17.829,11.595L121.76,128.01c31.198-27.604,70.896-42.677,112.906-42.677     s81.708,15.073,112.906,42.677L302.177,173.406z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg><img></span> &nbsp; &nbsp;Weight
+                </h1>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                  type="number" min="0" id="Submit_Weight" name="Submit_Weight" />&nbsp;&nbsp;kg
+                <input type="submit" value="Calculate" onclick="BMI()"
+                  class="u-btn u-btn-round u-button-style u-palette-4-base u-radius-15 u-btn-1"
+                  data-animation-name="rubberBand" data-animation-duration="1750" data-animation-delay="0"
+                  data-animation-direction=""></a>
+              </div>
+            </div>
+            <div class="u-align-center u-black u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+              <div class="u-container-layout u-valign-top u-container-layout-3">
+                <div class="u-expanded-width u-table u-table-responsive u-table-1">
+                  <table class="u-table-entity">
+                    <colgroup>
+                      <col width="50%">
+                      <col width="50%">
+                    </colgroup>
+                    <thead class="u-palette-4-base u-table-header u-table-header-1">
+                      <tr style="height: 61px;">
+                        <th class="u-border-1 u-border-palette-4-base u-table-cell"></th>
+                        <th
+                          class="u-align-center u-border-1 u-border-palette-4-base u-custom-font u-font-merriweather u-table-cell u-table-cell-2">
+                          身體質量指數(kg/m2) </th>
+                      </tr>
+                    </thead>
+                    <tbody class="u-table-body">
+                      <tr style="height: 133px;">
+                        <td id="light"
+                          class="u-align-center u-border-1 u-border-grey-30 u-custom-font u-first-column u-font-merriweather u-white u-table-cell u-table-cell-3">
+                          體重過輕</td>
+                        <td id="light2"
+                          class="u-align-center u-border-1 u-border-grey-30 u-custom-font u-font-merriweather u-table-cell u-white u-table-cell-4">
+                          BMI &lt; 18.5</td>
+                      </tr>
+                      <tr style="height: 134px;">
+                        <td id="normal"
+                          class="u-align-center u-border-1 u-border-grey-30 u-first-column u-white u-table-cell u-table-cell-5">
+                          正常範圍</td>
+                        <td id="normal2"
+                          class="u-align-center u-border-1 u-border-grey-30 u-custom-font u-font-merriweather u-table-cell u-white u-table-cell-6">
+                          18.5&nbsp;<b>≤ BMI &lt; 24</b>
+                        </td>
+                      </tr>
+                      <tr style="height: 134px;">
+                        <td id="heavy"
+                          class="u-align-center u-border-1 u-border-grey-30 u-first-column u-white u-table-cell u-table-cell-7">
+                          體重過重</td>
+                        <td id="heavy2"
+                          class="u-align-center u-border-1 u-border-grey-30 u-custom-font u-font-merriweather u-white u-table-cell u-table-cell-8">
+                          24&nbsp;<b>≤ BMI &lt; 27</b>
+                        </td>
+                      </tr>
+                      <tr style="height: 134px;">
+                        <td id="veryheavy"
+                          class="u-align-center u-border-1 u-border-grey-30 u-first-column u-white u-table-cell u-table-cell-9">
+                          體重肥胖</td>
+                        <td id="veryheavy2"
+                          class="u-align-center u-border-1 u-border-grey-30 u-custom-font u-font-merriweather u-white u-table-cell u-table-cell-10">
+                          BMI&nbsp;≥ 27</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+</body>
+
+</html>

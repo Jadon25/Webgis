@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="Result, Result, Result">
+  <meta name="description" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <title>Question one</title>
+  <link rel="stylesheet" href="nicepage.css" media="screen">
+  <link rel="stylesheet" href="Question-one.css" media="screen">
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Lobster:400">
+
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+
+
+  <script>
+    //FOR LOOP SCRIPT
+    function add1() {
+      var S1_1 = document.getElementById('Start1').value;
+      var E1_1 = document.getElementById('End1').value;
+      var T1_1 = document.getElementById('Threshold1').value;
+      var S1 = parseInt(document.getElementById('Start1').value);
+      var E1 = parseInt(document.getElementById('End1').value);
+      var T1 = parseInt(document.getElementById('Threshold1').value);
+
+      var Result1 = 0;
+      if (S1_1 == null || S1_1 == "", E1_1 == null || E1_1 == "", T1_1 == null || T1_1 == "") {
+        alert("Please Fill All Required Field");
+        document.getElementById('display1').innerHTML = "ERROR";
+        return;
+      }
+      else if (T1 > E1) {
+        alert("End must greater or equal to Threshold!");
+        document.getElementById('display1').innerHTML = "ERROR";
+        return;
+      }
+      else if (S1 > E1) {
+        alert("Start must less or equal to End");
+        document.getElementById('display1').innerHTML = "ERROR";
+        return;
+      }
+      else if (T1 <= S1) {
+        T1 = S1;
+      }
+      for (var i = parseInt(T1); i <= parseInt(E1); i++) {
+        Result1 += i;
+      }
+      document.getElementById('display1').innerHTML = Result1;
+    }
+
+    //WHILE LOOP SCRIPT
+    function add2() {
+      var S2_1 = document.getElementById('Start2').value;
+      var E2_1 = document.getElementById('End2').value;
+      var T2_1 = document.getElementById('Threshold2').value;
+      var S2 = parseInt(document.getElementById('Start2').value);
+      var E2 = parseInt(document.getElementById('End2').value);
+      var T2 = parseInt(document.getElementById('Threshold2').value);
+
+      var Result2 = 0;
+      if (S2_1 == null || S2_1 == "", E2_1 == null || E2_1 == "", T2_1 == null || T2_1 == "") {
+        alert("Please Fill All Required Field");
+        document.getElementById('display2').innerHTML = "ERROR";
+        return;
+      }
+      else if (T2 > E2) {
+        alert("End must greater or equal to Threshold!");
+        document.getElementById('display2').innerHTML = "ERROR";
+        return;
+      }
+      else if (S2 > E2) {
+        alert("Start must less or equal to End");
+        document.getElementById('display2').innerHTML = "ERROR";
+        return;
+      }
+      else if (T2 <= S2) {
+        T2 = S2;
+      }
+      var i = T2;
+      while (i <= E2) {
+        Result2 += i;
+        i++;
+      }
+      document.getElementById('display2').innerHTML = Result2;
+    }
+
+    //DO WHILE LOOP SCRIPT
+    function add3() {
+      var S3_1 = document.getElementById('Start3').value;
+      var E3_1 = document.getElementById('End3').value;
+      var T3_1 = document.getElementById('Threshold3').value;
+      var S3 = parseInt(document.getElementById('Start3').value);
+      var E3 = parseInt(document.getElementById('End3').value);
+      var T3 = parseInt(document.getElementById('Threshold3').value);
+
+      var Result3 = 0;
+      if (S3_1 == null || S3_1 == "", E3_1 == null || E3_1 == "", T3_1 == null || T3_1 == "") {
+        alert("Please Fill All Required Field");
+        document.getElementById('display3').innerHTML = "ERROR";
+        return;
+      }
+      else if (T3 > E3) {
+        alert("End must greater or equal to Threshold!");
+        document.getElementById('display3').innerHTML = "ERROR";
+        return;
+      }
+      else if (S3 > E3) {
+        alert("Start must less or equal to End");
+        document.getElementById('display3').innerHTML = "ERROR";
+        return;
+      }
+      else if (T3 <= S3) {
+        T3 = S3;
+      }
+      var i = T3;
+      do {
+        Result3 += i;         
+        i++;
+      } while (i <= E3);
+      document.getElementById('display3').innerHTML = Result3;
+    }
+  </script>
+
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="Question one">
+  <meta property="og:type" content="website">
+</head>
+
+<body data-home-page="Question-one.html" data-home-page-title="Question one" class="u-body">
+  <header class="u-clearfix u-header u-header" id="sec-5c27">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+        <div class="menu-collapse"
+          style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+          <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                  <rect y="1" width="16" height="2"></rect>
+                  <rect y="7" width="16" height="2"></rect>
+                  <rect y="13" width="16" height="2"></rect>
+                </symbol>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="u-custom-menu u-nav-container">
+          <ul class="u-nav u-spacing-30 u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-palette-3-base u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-black u-nav-link u-text-active-palette-3-base u-text-grey-90 u-text-hover-white"
+                href="Question-one.html" style="padding: 10px 0px;">Question one</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-border-2 u-border-active-palette-3-base u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-black u-nav-link u-text-active-palette-3-base u-text-grey-90 u-text-hover-white"
+                href="Question--two.html" style="padding: 10px 0px;">Question two</a>
+            </li>
+          </ul>
+        </div>
+        <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-inner-container-layout u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Question-one.html"
+                    style="padding: 10px 0px;">Question one</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Question--two.html"
+                    style="padding: 10px 0px;">Question two</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+      <h3 class="u-align-left u-custom-font u-font-merriweather u-text u-text-palette-1-base u-text-1">
+        <span class="u-text-palette-2-base">R10228025&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          &nbsp;</span>
+      </h3>
+      <h3 class="u-align-center u-custom-font u-font-lobster u-text u-text-default u-text-2">Assignment 2</h3>
+    </div>
+  </header>
+  <section class="skrollable u-align-center u-border-3 u-border-grey-75 u-clearfix u-grey-10 u-section-1"
+    id="carousel_1d49">
+    <img src="images/Picture1.jpg" alt="" class="u-expanded-width u-image u-image-default u-image-1"
+      data-image-width="770" data-image-height="300">
+    <h3 class="u-custom-font u-font-merriweather u-text u-text-default u-text-palette-1-base u-text-1">
+      <span class="u-text-palette-2-base">Three programs​ to get sum</span>
+    </h3>
+    <div class="u-tab-links-align-left u-tabs u-tabs-1">
+      <ul class="u-border-2 u-border-grey-75 u-spacing-10 u-tab-list u-unstyled u-white u-tab-list-1" role="tablist">
+        <li class="u-tab-item" role="presentation">
+          <a class="active u-active-palette-1-base u-border-2 u-border-grey-75 u-button-style u-custom-font u-font-merriweather u-hover-palette-2-base u-tab-link u-text-active-white u-text-hover-white u-tab-link-1"
+            id="link-tab-ed37" href="#tab-ed37" role="tab" aria-controls="tab-ed37" aria-selected="true">For Loop</a>
+        </li>
+        <li class="u-tab-item" role="presentation">
+          <a class="u-active-palette-1-base u-border-2 u-border-grey-75 u-button-style u-custom-font u-font-merriweather u-hover-palette-2-base u-tab-link u-text-active-white u-text-hover-white u-tab-link-2"
+            id="link-tab-5539" href="#tab-5539" role="tab" aria-controls="tab-5539" aria-selected="false">While Loop</a>
+        </li>
+        <li class="u-tab-item" role="presentation">
+          <a class="u-active-palette-1-base u-border-2 u-border-grey-75 u-button-style u-custom-font u-font-merriweather u-hover-palette-2-base u-tab-link u-text-active-white u-text-hover-white u-tab-link-3"
+            id="link-tab-fe23" href="#tab-fe23" role="tab" aria-controls="tab-fe23" aria-selected="false">Do While
+            Loop</a>
+        </li>
+      </ul>
+      <div class="u-tab-content">
+        <div class="u-container-style u-palette-5-light-3 u-tab-active u-tab-pane" id="tab-ed37" role="tabpanel"
+          aria-labelledby="link-tab-ed37">
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-text u-text-2"> &nbsp;Start:&nbsp;<input type="number" min="0" id="Start1" name="Start1"
+                style="width:150px" /></p>
+            <p class="u-text u-text-3"> &nbsp;End:&nbsp;&nbsp;&nbsp;<input type="number" min="0" id="End1" name="End1"
+                style="width:150px" />&nbsp;</p><span class="u-icon u-icon-rectangle u-icon-1"><svg class="u-svg-link"
+                preserveAspectRatio="xMidYMin slice" viewBox="0 0 256 256" style="">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bd00"></use>
+              </svg><svg class="u-svg-content" viewBox="0 0 256 256" id="svg-bd00">
+                <g>
+                  <g>
+                    <g>
+                      <g>
+                        <g>
+                          <g>
+                            <g>
+                              <path id="XMLID_294_"
+                                d="m194.86 155.361c-2.175-.197-4.361-.301-6.548-.301-7.82 0-15.663 1.261-23.206 3.806-2.996 1.006-5.911 2.198-8.734 3.586l-45.614 22.315-76.327-41.414c-2.302-1.319-4.801-1.943-7.276-1.943-5.067 0-9.995 2.638-12.702 7.346-4.026 6.999-1.048 14.407 5.402 19.967l75.46 69.132c.046.035.093.081.139.116 7.369 5.622 17.202 6.848 25.878 3.575l60.988-23.032c6.767-2.279 13.859-2.776 20.638-1.643 3.956.659 7.809 1.874 11.453 3.621v-60.56c-6.306-2.431-12.888-3.958-19.551-4.571z"
+                                fill="#ffbb98"></path>
+                              <path
+                                d="m243.331 150.349v75.906c0 2.895-2.341 5.237-5.237 5.237h-18.444c-2.896 0-5.237-2.341-5.237-5.237v-75.906c0-2.886 2.341-5.237 5.237-5.237h18.444c2.895 0 5.237 2.351 5.237 5.237z"
+                                fill="#4bdbc3"></path>
+                              <path
+                                d="m243.331 150.349v75.906c0 2.895-2.341 5.237-5.237 5.237h-4.109c-2.896 0-5.237-2.341-5.237-5.237v-75.906c0-2.886 2.341-5.237 5.237-5.237h4.109c2.895 0 5.237 2.351 5.237 5.237z"
+                                fill="#3bb2a0"></path>
+                              <path id="XMLID_293_"
+                                d="m194.86 155.361c-2.175-.197-4.361-.301-6.548-.301-7.82 0-15.663 1.261-23.206 3.806-2.996 1.006-5.911 2.198-8.734 3.586l-45.614 22.315-7.23 3.54c-4.731 2.383-7.462 7.172-7.462 12.124 0 2.059.463 4.153 1.458 6.108 3.378 6.698 11.534 9.393 18.232 6.015l56-27.393s16.225-7.281 36.13-5.884l6.524.524v-19.87c-6.305-2.43-12.887-3.957-19.55-4.57z"
+                                fill="#ffcaa6"></path>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                    <g>
+                      <circle cx="113.516" cy="78.894" fill="#ea2a6a" r="66.218"></circle>
+                      <path
+                        d="m113.516 123.78c-24.749 0-44.885-20.136-44.885-44.886s20.136-44.886 44.885-44.886c24.75 0 44.887 20.136 44.887 44.886 0 24.751-20.137 44.886-44.887 44.886z"
+                        fill="#ffefee"></path>
+                      <path
+                        d="m139.678 67.375-14.327-2.082c-1.072-.156-1.998-.829-2.478-1.8l-6.407-12.982c-1.207-2.446-4.695-2.446-5.902 0l-6.407 12.982c-.479.971-1.406 1.644-2.478 1.8l-14.327 2.082c-2.699.392-3.777 3.709-1.824 5.612l10.367 10.106c.775.756 1.129 1.845.946 2.912l-2.447 14.269c-.461 2.688 2.36 4.738 4.774 3.469l12.814-6.737c.959-.504 2.104-.504 3.063 0l12.814 6.737c2.414 1.269 5.236-.781 4.775-3.469l-2.447-14.269c-.183-1.067.171-2.157.946-2.912l10.367-10.106c1.955-1.903.878-5.22-1.822-5.612z"
+                        fill="#f9d335"></path>
+                    </g>
+                  </g>
+                  <g fill="#5f266d">
+                    <path
+                      d="m176.5 201.573-1.038.422c-4.864 1.977-1.931 9.418 3.012 7.412l1.038-.422c2.047-.832 3.031-3.165 2.2-5.212-.833-2.047-3.167-3.029-5.212-2.2z">
+                    </path>
+                    <path
+                      d="m161.566 207.638-9.266 3.763c-4.854 1.971-1.94 9.421 3.01 7.412l9.266-3.763c2.047-.831 3.032-3.164 2.201-5.211s-3.165-3.03-5.211-2.201z">
+                    </path>
+                    <path
+                      d="m238.093 141.133h-18.442c-5.094 0-9.238 4.144-9.238 9.237v4.006c-18.452-5.56-38.483-4.014-55.789 4.499l-43.75 21.405-74.434-40.382c-8.905-5.1-20.313-2.014-25.432 6.883-4.67 8.123-2.221 17.914 6.238 24.97 2.931 2.693 75.427 69.131 75.796 69.409 8.338 6.36 19.728 7.907 29.713 4.133l60.917-22.998c8.764-2.939 18.164-2.63 26.74.821v3.146c0 5.094 4.145 9.237 9.238 9.237h18.442c5.094 0 9.237-4.144 9.237-9.237v-75.892c.001-5.093-4.142-9.237-9.236-9.237zm-27.681 73.474c-9.54-3.118-19.765-3.109-29.364.129-.045.016-.089.031-.134.048l-60.986 23.024c-7.4 2.794-15.77 1.685-21.904-2.912-3.388-3.091-74.806-68.524-75.422-69.091-.056-.051-.111-.101-.17-.148-4.273-3.539-7.696-9.31-4.489-14.889 2.922-5.08 9.436-6.842 14.602-3.885l69.509 37.711-.31.152c-4.197 2.114-7.316 5.743-8.783 10.217-4.827 14.731 10.616 28.229 24.567 21.193l57.083-27.923c1.984-.971 2.806-3.366 1.835-5.351-.97-1.984-3.366-2.806-5.351-1.835l-57.126 27.944c-7.667 3.863-16.027-3.541-13.406-11.538.799-2.438 2.496-4.413 4.739-5.543l52.845-25.854c16.22-7.979 35.114-9.127 52.266-3.29v51.841zm28.918 11.655c0 .683-.555 1.237-1.237 1.237h-18.442c-.683 0-1.238-.555-1.238-1.237v-75.892c0-.683.556-1.237 1.238-1.237h18.442c.683 0 1.237.555 1.237 1.237z">
+                    </path>
+                    <path
+                      d="m113.516 127.781c26.956 0 48.887-21.93 48.887-48.886s-21.931-48.887-48.887-48.887c-26.955 0-48.885 21.931-48.885 48.887s21.93 48.886 48.885 48.886zm0-89.773c22.545 0 40.887 18.342 40.887 40.887s-18.342 40.886-40.887 40.886c-22.544 0-40.885-18.341-40.885-40.886s18.341-40.887 40.885-40.887z">
+                    </path>
+                    <path
+                      d="m90.454 99.598c-1.021 5.954 5.231 10.495 10.578 7.686l12.484-6.563 12.484 6.562c5.344 2.813 11.599-1.731 10.578-7.685l-2.384-13.901 10.1-9.845c2.002-1.95 2.709-4.814 1.845-7.474-2.023-6.225-9.124-4.953-12.75-5.959l2.127-2.85c1.321-1.771.957-4.277-.813-5.599-1.771-1.319-4.275-.956-5.599.813l-3.652 4.894-5.398-10.936c-2.673-5.418-10.402-5.417-13.075-.001l-6.242 12.647-13.956 2.028c-5.979.867-8.367 8.222-4.042 12.436l10.1 9.845zm-1.101-28.471 12.905-1.876c2.373-.346 4.425-1.836 5.487-3.987l5.771-11.693c6.013 12.028 5.72 11.937 6.702 13.12l-9.031 12.102-1.783-2.33c-1.343-1.752-3.853-2.086-5.608-.745-1.754 1.343-2.088 3.854-.745 5.608l5 6.532c.758.989 1.932 1.568 3.177 1.568h.024c1.254-.008 2.432-.603 3.182-1.607l13.513-18.106 9.735 1.415-9.338 9.102c-1.718 1.675-2.502 4.086-2.097 6.452l2.204 12.853-11.542-6.068c-2.125-1.117-4.661-1.115-6.784 0l-11.542 6.068 2.204-12.854c.405-2.365-.379-4.776-2.097-6.451z">
+                    </path>
+                    <path
+                      d="m113.517 149.112c38.718 0 70.218-31.5 70.218-70.218s-31.5-70.218-70.218-70.218-70.218 31.5-70.218 70.218 31.5 70.218 70.218 70.218zm0-132.436c34.307 0 62.218 27.911 62.218 62.218s-27.911 62.218-62.218 62.218-62.218-27.911-62.218-62.218 27.911-62.218 62.218-62.218z">
+                    </path>
+                  </g>
+                </g>
+              </svg></span>
+            <p class="u-text u-text-4"><span class="u-icon u-icon-2"><svg class="u-svg-content" viewBox="0 0 50 50"
+                  x="0px" y="0px" style="width: 1em; height: 1em;">
+                  <circle style="fill:#D75A4A;" cx="25" cy="25" r="25"></circle>
+                  <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                    points="16,34 25,25 34,16 
+	"></polyline>
+                  <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                    points="16,16 25,25 34,34 
+	"></polyline>
+                </svg><img></span>&nbsp;Threshold:<br>&nbsp;&nbsp;<input type="number" min="0" id="Threshold1"
+                name="Threshold1" style="width:150px" />
+            </p>
+            <h1 id='display1' class="u-custom-font u-font-lobster u-text u-text-5" data-animation-name="jackInTheBox"
+              data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Result</h1>
+            <input type="submit" value="Calculate" onclick="add1()"
+              class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-3 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-1"></a><br><br>
+          </div>
+        </div>
+        <div class="u-container-style u-palette-5-light-3 u-tab-pane" id="tab-5539" role="tabpanel"
+          aria-labelledby="link-tab-5539">
+          <div class="u-container-layout u-container-layout-2">
+            <p class="u-text u-text-6"> &nbsp;Start:&nbsp;<input type="number" min="0" id="Start2" name="Start2"
+                style="width:150px" /></p>
+            <p class="u-text u-text-7"> &nbsp;End:&nbsp;&nbsp;&nbsp;<input type="number" min="0" id="End2" name="End2"
+                style="width:150px" /></p><span class="u-icon u-icon-rectangle u-icon-3"><svg class="u-svg-link"
+                preserveAspectRatio="xMidYMin slice" viewBox="0 0 256 256" style="">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-207c"></use>
+              </svg><svg class="u-svg-content" viewBox="0 0 256 256" id="svg-207c">
+                <g>
+                  <g>
+                    <g>
+                      <g>
+                        <g>
+                          <g>
+                            <g>
+                              <path id="XMLID_294_"
+                                d="m194.86 155.361c-2.175-.197-4.361-.301-6.548-.301-7.82 0-15.663 1.261-23.206 3.806-2.996 1.006-5.911 2.198-8.734 3.586l-45.614 22.315-76.327-41.414c-2.302-1.319-4.801-1.943-7.276-1.943-5.067 0-9.995 2.638-12.702 7.346-4.026 6.999-1.048 14.407 5.402 19.967l75.46 69.132c.046.035.093.081.139.116 7.369 5.622 17.202 6.848 25.878 3.575l60.988-23.032c6.767-2.279 13.859-2.776 20.638-1.643 3.956.659 7.809 1.874 11.453 3.621v-60.56c-6.306-2.431-12.888-3.958-19.551-4.571z"
+                                fill="#ffbb98"></path>
+                              <path
+                                d="m243.331 150.349v75.906c0 2.895-2.341 5.237-5.237 5.237h-18.444c-2.896 0-5.237-2.341-5.237-5.237v-75.906c0-2.886 2.341-5.237 5.237-5.237h18.444c2.895 0 5.237 2.351 5.237 5.237z"
+                                fill="#4bdbc3"></path>
+                              <path
+                                d="m243.331 150.349v75.906c0 2.895-2.341 5.237-5.237 5.237h-4.109c-2.896 0-5.237-2.341-5.237-5.237v-75.906c0-2.886 2.341-5.237 5.237-5.237h4.109c2.895 0 5.237 2.351 5.237 5.237z"
+                                fill="#3bb2a0"></path>
+                              <path id="XMLID_293_"
+                                d="m194.86 155.361c-2.175-.197-4.361-.301-6.548-.301-7.82 0-15.663 1.261-23.206 3.806-2.996 1.006-5.911 2.198-8.734 3.586l-45.614 22.315-7.23 3.54c-4.731 2.383-7.462 7.172-7.462 12.124 0 2.059.463 4.153 1.458 6.108 3.378 6.698 11.534 9.393 18.232 6.015l56-27.393s16.225-7.281 36.13-5.884l6.524.524v-19.87c-6.305-2.43-12.887-3.957-19.55-4.57z"
+                                fill="#ffcaa6"></path>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                    <g>
+                      <circle cx="113.516" cy="78.894" fill="#ea2a6a" r="66.218"></circle>
+                      <path
+                        d="m113.516 123.78c-24.749 0-44.885-20.136-44.885-44.886s20.136-44.886 44.885-44.886c24.75 0 44.887 20.136 44.887 44.886 0 24.751-20.137 44.886-44.887 44.886z"
+                        fill="#ffefee"></path>
+                      <path
+                        d="m139.678 67.375-14.327-2.082c-1.072-.156-1.998-.829-2.478-1.8l-6.407-12.982c-1.207-2.446-4.695-2.446-5.902 0l-6.407 12.982c-.479.971-1.406 1.644-2.478 1.8l-14.327 2.082c-2.699.392-3.777 3.709-1.824 5.612l10.367 10.106c.775.756 1.129 1.845.946 2.912l-2.447 14.269c-.461 2.688 2.36 4.738 4.774 3.469l12.814-6.737c.959-.504 2.104-.504 3.063 0l12.814 6.737c2.414 1.269 5.236-.781 4.775-3.469l-2.447-14.269c-.183-1.067.171-2.157.946-2.912l10.367-10.106c1.955-1.903.878-5.22-1.822-5.612z"
+                        fill="#f9d335"></path>
+                    </g>
+                  </g>
+                  <g fill="#5f266d">
+                    <path
+                      d="m176.5 201.573-1.038.422c-4.864 1.977-1.931 9.418 3.012 7.412l1.038-.422c2.047-.832 3.031-3.165 2.2-5.212-.833-2.047-3.167-3.029-5.212-2.2z">
+                    </path>
+                    <path
+                      d="m161.566 207.638-9.266 3.763c-4.854 1.971-1.94 9.421 3.01 7.412l9.266-3.763c2.047-.831 3.032-3.164 2.201-5.211s-3.165-3.03-5.211-2.201z">
+                    </path>
+                    <path
+                      d="m238.093 141.133h-18.442c-5.094 0-9.238 4.144-9.238 9.237v4.006c-18.452-5.56-38.483-4.014-55.789 4.499l-43.75 21.405-74.434-40.382c-8.905-5.1-20.313-2.014-25.432 6.883-4.67 8.123-2.221 17.914 6.238 24.97 2.931 2.693 75.427 69.131 75.796 69.409 8.338 6.36 19.728 7.907 29.713 4.133l60.917-22.998c8.764-2.939 18.164-2.63 26.74.821v3.146c0 5.094 4.145 9.237 9.238 9.237h18.442c5.094 0 9.237-4.144 9.237-9.237v-75.892c.001-5.093-4.142-9.237-9.236-9.237zm-27.681 73.474c-9.54-3.118-19.765-3.109-29.364.129-.045.016-.089.031-.134.048l-60.986 23.024c-7.4 2.794-15.77 1.685-21.904-2.912-3.388-3.091-74.806-68.524-75.422-69.091-.056-.051-.111-.101-.17-.148-4.273-3.539-7.696-9.31-4.489-14.889 2.922-5.08 9.436-6.842 14.602-3.885l69.509 37.711-.31.152c-4.197 2.114-7.316 5.743-8.783 10.217-4.827 14.731 10.616 28.229 24.567 21.193l57.083-27.923c1.984-.971 2.806-3.366 1.835-5.351-.97-1.984-3.366-2.806-5.351-1.835l-57.126 27.944c-7.667 3.863-16.027-3.541-13.406-11.538.799-2.438 2.496-4.413 4.739-5.543l52.845-25.854c16.22-7.979 35.114-9.127 52.266-3.29v51.841zm28.918 11.655c0 .683-.555 1.237-1.237 1.237h-18.442c-.683 0-1.238-.555-1.238-1.237v-75.892c0-.683.556-1.237 1.238-1.237h18.442c.683 0 1.237.555 1.237 1.237z">
+                    </path>
+                    <path
+                      d="m113.516 127.781c26.956 0 48.887-21.93 48.887-48.886s-21.931-48.887-48.887-48.887c-26.955 0-48.885 21.931-48.885 48.887s21.93 48.886 48.885 48.886zm0-89.773c22.545 0 40.887 18.342 40.887 40.887s-18.342 40.886-40.887 40.886c-22.544 0-40.885-18.341-40.885-40.886s18.341-40.887 40.885-40.887z">
+                    </path>
+                    <path
+                      d="m90.454 99.598c-1.021 5.954 5.231 10.495 10.578 7.686l12.484-6.563 12.484 6.562c5.344 2.813 11.599-1.731 10.578-7.685l-2.384-13.901 10.1-9.845c2.002-1.95 2.709-4.814 1.845-7.474-2.023-6.225-9.124-4.953-12.75-5.959l2.127-2.85c1.321-1.771.957-4.277-.813-5.599-1.771-1.319-4.275-.956-5.599.813l-3.652 4.894-5.398-10.936c-2.673-5.418-10.402-5.417-13.075-.001l-6.242 12.647-13.956 2.028c-5.979.867-8.367 8.222-4.042 12.436l10.1 9.845zm-1.101-28.471 12.905-1.876c2.373-.346 4.425-1.836 5.487-3.987l5.771-11.693c6.013 12.028 5.72 11.937 6.702 13.12l-9.031 12.102-1.783-2.33c-1.343-1.752-3.853-2.086-5.608-.745-1.754 1.343-2.088 3.854-.745 5.608l5 6.532c.758.989 1.932 1.568 3.177 1.568h.024c1.254-.008 2.432-.603 3.182-1.607l13.513-18.106 9.735 1.415-9.338 9.102c-1.718 1.675-2.502 4.086-2.097 6.452l2.204 12.853-11.542-6.068c-2.125-1.117-4.661-1.115-6.784 0l-11.542 6.068 2.204-12.854c.405-2.365-.379-4.776-2.097-6.451z">
+                    </path>
+                    <path
+                      d="m113.517 149.112c38.718 0 70.218-31.5 70.218-70.218s-31.5-70.218-70.218-70.218-70.218 31.5-70.218 70.218 31.5 70.218 70.218 70.218zm0-132.436c34.307 0 62.218 27.911 62.218 62.218s-27.911 62.218-62.218 62.218-62.218-27.911-62.218-62.218 27.911-62.218 62.218-62.218z">
+                    </path>
+                  </g>
+                </g>
+              </svg></span>
+            <p class="u-text u-text-8"><span class="u-icon u-icon-4"><svg class="u-svg-content" viewBox="0 0 50 50"
+                  x="0px" y="0px" style="width: 1em; height: 1em;">
+                  <circle style="fill:#D75A4A;" cx="25" cy="25" r="25"></circle>
+                  <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                    points="16,34 25,25 34,16 
+	"></polyline>
+                  <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                    points="16,16 25,25 34,34 
+	"></polyline>
+                </svg><img></span>&nbsp;Threshold:<br>&nbsp;&nbsp;<input type="number" min="0" id="Threshold2"
+                name="Threshold2" style="width:150px" />
+            </p>
+            <h1 id='display2' class="u-custom-font u-font-lobster u-text u-text-9" data-animation-name="jackInTheBox"
+              data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Result</h1>
+            <input type="submit" value="Calculate" onclick="add2()"
+              class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-3 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-2"></a><br><br>
+          </div>
+        </div>
+        <div class="u-container-style u-palette-5-light-3 u-tab-pane" id="tab-fe23" role="tabpanel"
+          aria-labelledby="link-tab-fe23">
+          <div class="u-container-layout u-container-layout-3">
+            <p class="u-text u-text-10"> &nbsp;Start:&nbsp;<input type="number" min="0" id="Start3" name="Start3"
+                style="width:150px" /></p>
+            <p class="u-text u-text-11"> &nbsp;End:&nbsp;&nbsp;&nbsp;<input type="number" min="0" id="End3" name="End3"
+                style="width:150px" /></p><span class="u-icon u-icon-rectangle u-icon-5"><svg class="u-svg-link"
+                preserveAspectRatio="xMidYMin slice" viewBox="0 0 256 256" style="">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cf82"></use>
+              </svg><svg class="u-svg-content" viewBox="0 0 256 256" id="svg-cf82">
+                <g>
+                  <g>
+                    <g>
+                      <g>
+                        <g>
+                          <g>
+                            <g>
+                              <path id="XMLID_294_"
+                                d="m194.86 155.361c-2.175-.197-4.361-.301-6.548-.301-7.82 0-15.663 1.261-23.206 3.806-2.996 1.006-5.911 2.198-8.734 3.586l-45.614 22.315-76.327-41.414c-2.302-1.319-4.801-1.943-7.276-1.943-5.067 0-9.995 2.638-12.702 7.346-4.026 6.999-1.048 14.407 5.402 19.967l75.46 69.132c.046.035.093.081.139.116 7.369 5.622 17.202 6.848 25.878 3.575l60.988-23.032c6.767-2.279 13.859-2.776 20.638-1.643 3.956.659 7.809 1.874 11.453 3.621v-60.56c-6.306-2.431-12.888-3.958-19.551-4.571z"
+                                fill="#ffbb98"></path>
+                              <path
+                                d="m243.331 150.349v75.906c0 2.895-2.341 5.237-5.237 5.237h-18.444c-2.896 0-5.237-2.341-5.237-5.237v-75.906c0-2.886 2.341-5.237 5.237-5.237h18.444c2.895 0 5.237 2.351 5.237 5.237z"
+                                fill="#4bdbc3"></path>
+                              <path
+                                d="m243.331 150.349v75.906c0 2.895-2.341 5.237-5.237 5.237h-4.109c-2.896 0-5.237-2.341-5.237-5.237v-75.906c0-2.886 2.341-5.237 5.237-5.237h4.109c2.895 0 5.237 2.351 5.237 5.237z"
+                                fill="#3bb2a0"></path>
+                              <path id="XMLID_293_"
+                                d="m194.86 155.361c-2.175-.197-4.361-.301-6.548-.301-7.82 0-15.663 1.261-23.206 3.806-2.996 1.006-5.911 2.198-8.734 3.586l-45.614 22.315-7.23 3.54c-4.731 2.383-7.462 7.172-7.462 12.124 0 2.059.463 4.153 1.458 6.108 3.378 6.698 11.534 9.393 18.232 6.015l56-27.393s16.225-7.281 36.13-5.884l6.524.524v-19.87c-6.305-2.43-12.887-3.957-19.55-4.57z"
+                                fill="#ffcaa6"></path>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                    <g>
+                      <circle cx="113.516" cy="78.894" fill="#ea2a6a" r="66.218"></circle>
+                      <path
+                        d="m113.516 123.78c-24.749 0-44.885-20.136-44.885-44.886s20.136-44.886 44.885-44.886c24.75 0 44.887 20.136 44.887 44.886 0 24.751-20.137 44.886-44.887 44.886z"
+                        fill="#ffefee"></path>
+                      <path
+                        d="m139.678 67.375-14.327-2.082c-1.072-.156-1.998-.829-2.478-1.8l-6.407-12.982c-1.207-2.446-4.695-2.446-5.902 0l-6.407 12.982c-.479.971-1.406 1.644-2.478 1.8l-14.327 2.082c-2.699.392-3.777 3.709-1.824 5.612l10.367 10.106c.775.756 1.129 1.845.946 2.912l-2.447 14.269c-.461 2.688 2.36 4.738 4.774 3.469l12.814-6.737c.959-.504 2.104-.504 3.063 0l12.814 6.737c2.414 1.269 5.236-.781 4.775-3.469l-2.447-14.269c-.183-1.067.171-2.157.946-2.912l10.367-10.106c1.955-1.903.878-5.22-1.822-5.612z"
+                        fill="#f9d335"></path>
+                    </g>
+                  </g>
+                  <g fill="#5f266d">
+                    <path
+                      d="m176.5 201.573-1.038.422c-4.864 1.977-1.931 9.418 3.012 7.412l1.038-.422c2.047-.832 3.031-3.165 2.2-5.212-.833-2.047-3.167-3.029-5.212-2.2z">
+                    </path>
+                    <path
+                      d="m161.566 207.638-9.266 3.763c-4.854 1.971-1.94 9.421 3.01 7.412l9.266-3.763c2.047-.831 3.032-3.164 2.201-5.211s-3.165-3.03-5.211-2.201z">
+                    </path>
+                    <path
+                      d="m238.093 141.133h-18.442c-5.094 0-9.238 4.144-9.238 9.237v4.006c-18.452-5.56-38.483-4.014-55.789 4.499l-43.75 21.405-74.434-40.382c-8.905-5.1-20.313-2.014-25.432 6.883-4.67 8.123-2.221 17.914 6.238 24.97 2.931 2.693 75.427 69.131 75.796 69.409 8.338 6.36 19.728 7.907 29.713 4.133l60.917-22.998c8.764-2.939 18.164-2.63 26.74.821v3.146c0 5.094 4.145 9.237 9.238 9.237h18.442c5.094 0 9.237-4.144 9.237-9.237v-75.892c.001-5.093-4.142-9.237-9.236-9.237zm-27.681 73.474c-9.54-3.118-19.765-3.109-29.364.129-.045.016-.089.031-.134.048l-60.986 23.024c-7.4 2.794-15.77 1.685-21.904-2.912-3.388-3.091-74.806-68.524-75.422-69.091-.056-.051-.111-.101-.17-.148-4.273-3.539-7.696-9.31-4.489-14.889 2.922-5.08 9.436-6.842 14.602-3.885l69.509 37.711-.31.152c-4.197 2.114-7.316 5.743-8.783 10.217-4.827 14.731 10.616 28.229 24.567 21.193l57.083-27.923c1.984-.971 2.806-3.366 1.835-5.351-.97-1.984-3.366-2.806-5.351-1.835l-57.126 27.944c-7.667 3.863-16.027-3.541-13.406-11.538.799-2.438 2.496-4.413 4.739-5.543l52.845-25.854c16.22-7.979 35.114-9.127 52.266-3.29v51.841zm28.918 11.655c0 .683-.555 1.237-1.237 1.237h-18.442c-.683 0-1.238-.555-1.238-1.237v-75.892c0-.683.556-1.237 1.238-1.237h18.442c.683 0 1.237.555 1.237 1.237z">
+                    </path>
+                    <path
+                      d="m113.516 127.781c26.956 0 48.887-21.93 48.887-48.886s-21.931-48.887-48.887-48.887c-26.955 0-48.885 21.931-48.885 48.887s21.93 48.886 48.885 48.886zm0-89.773c22.545 0 40.887 18.342 40.887 40.887s-18.342 40.886-40.887 40.886c-22.544 0-40.885-18.341-40.885-40.886s18.341-40.887 40.885-40.887z">
+                    </path>
+                    <path
+                      d="m90.454 99.598c-1.021 5.954 5.231 10.495 10.578 7.686l12.484-6.563 12.484 6.562c5.344 2.813 11.599-1.731 10.578-7.685l-2.384-13.901 10.1-9.845c2.002-1.95 2.709-4.814 1.845-7.474-2.023-6.225-9.124-4.953-12.75-5.959l2.127-2.85c1.321-1.771.957-4.277-.813-5.599-1.771-1.319-4.275-.956-5.599.813l-3.652 4.894-5.398-10.936c-2.673-5.418-10.402-5.417-13.075-.001l-6.242 12.647-13.956 2.028c-5.979.867-8.367 8.222-4.042 12.436l10.1 9.845zm-1.101-28.471 12.905-1.876c2.373-.346 4.425-1.836 5.487-3.987l5.771-11.693c6.013 12.028 5.72 11.937 6.702 13.12l-9.031 12.102-1.783-2.33c-1.343-1.752-3.853-2.086-5.608-.745-1.754 1.343-2.088 3.854-.745 5.608l5 6.532c.758.989 1.932 1.568 3.177 1.568h.024c1.254-.008 2.432-.603 3.182-1.607l13.513-18.106 9.735 1.415-9.338 9.102c-1.718 1.675-2.502 4.086-2.097 6.452l2.204 12.853-11.542-6.068c-2.125-1.117-4.661-1.115-6.784 0l-11.542 6.068 2.204-12.854c.405-2.365-.379-4.776-2.097-6.451z">
+                    </path>
+                    <path
+                      d="m113.517 149.112c38.718 0 70.218-31.5 70.218-70.218s-31.5-70.218-70.218-70.218-70.218 31.5-70.218 70.218 31.5 70.218 70.218 70.218zm0-132.436c34.307 0 62.218 27.911 62.218 62.218s-27.911 62.218-62.218 62.218-62.218-27.911-62.218-62.218 27.911-62.218 62.218-62.218z">
+                    </path>
+                  </g>
+                </g>
+              </svg></span>
+            <p class="u-text u-text-12"><span class="u-icon u-icon-6"><svg class="u-svg-content" viewBox="0 0 50 50"
+                  x="0px" y="0px" style="width: 1em; height: 1em;">
+                  <circle style="fill:#D75A4A;" cx="25" cy="25" r="25"></circle>
+                  <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                    points="16,34 25,25 34,16 
+	"></polyline>
+                  <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                    points="16,16 25,25 34,34 
+	"></polyline>
+                </svg><img></span>&nbsp;Threshold:<br>&nbsp;&nbsp;<input type="number" min="0" id="Threshold3"
+                name="Threshold3" style="width:150px" />
+            </p>
+            <h1 id='display3' class="u-custom-font u-font-lobster u-text u-text-13" data-animation-name="jackInTheBox"
+              data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Result</h1>
+            <input type="submit" value="Calculate" onclick="add3()"
+              class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-3 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-3"><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
